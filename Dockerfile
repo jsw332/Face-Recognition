@@ -1,14 +1,7 @@
 FROM python:3.10-slim
 
 # System packages required for Django + psycopg2 + PIL, etc.
-RUN apt-get update && apt-get install -y \
-    libpq-dev \
-    gcc \
-    python3-dev \
-    build-essential \
-    libjpeg-dev \
-    zlib1g-dev \
-    && rm -rf /var/lib/apt/lists/*
+RUN RUN apt-get update && apt-get install -y libgl1
 
 # Set working directory
 WORKDIR /app
