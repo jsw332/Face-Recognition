@@ -1,7 +1,7 @@
 FROM python:3.12
 
 # System packages required for Django + psycopg2 + PIL, etc.
-RUN RUN apt-get update && apt-get install -y libgl1
+RUN apt-get update && apt-get install -y libgl1
 
 # Set working directory
 WORKDIR /app
